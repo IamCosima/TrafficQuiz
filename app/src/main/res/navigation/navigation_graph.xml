@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/titlefragment">
+
+    <fragment
+        android:id="@+id/quizfragment"
+        android:name="com.example.trafficquiz.quiz.game.quizfragment"
+        android:label="fragment_quizfragment"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizfragment_to_scorefragment"
+            app:destination="@id/scorefragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scorefragment"
+        android:name="com.example.trafficquiz.quiz.score.scorefragment"
+        android:label="fragment_scorefragment"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_scorefragment_to_titlefragment"
+            app:destination="@id/titlefragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/titlefragment"
+        android:name="com.example.trafficquiz.quiz.title.titlefragment"
+        android:label="fragment_titlefragment"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titlefragment_to_quizselector"
+            app:destination="@id/quizselector" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizselector"
+        android:name="com.example.trafficquiz.quiz.game.quizselector"
+        android:label="fragment_quizselector"
+        tools:layout="@layout/fragment_quizselector" >
+        <action
+            android:id="@+id/action_quizselector_to_quizfragment"
+            app:destination="@id/quizfragment" />
+    </fragment>
+</navigation>

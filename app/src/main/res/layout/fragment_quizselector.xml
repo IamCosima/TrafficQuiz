@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".QuizQuestionsActivity">
+
+        <TextView
+            android:id="@+id/text_view_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="Choose Quiz Type"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_road_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Road Sign" />
+
+        <Button
+            android:id="@+id/btn_road_markings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Road Markings" />
+
+        <Button
+            android:id="@+id/btn_signals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Signals" />
+
+        <Button
+            android:id="@+id/btn_road_rules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Road Rules" />
+
+        <Button
+            android:id="@+id/btn_vechicle_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Controls" />
+
+        <Button
+            android:id="@+id/btn_mixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mixed" />
+
+
+    </LinearLayout>
+</layout>
