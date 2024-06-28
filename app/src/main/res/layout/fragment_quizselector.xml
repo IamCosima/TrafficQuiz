@@ -8,14 +8,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/text_view_question"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center|top"
-            android:text="Choose Quiz Type"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:layout_height="148dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_question"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:text="Practice Mode"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,7 +70,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="94dp"
+            android:layout_height="90dp"
             android:orientation="horizontal"
             android:padding="10dp">
 
@@ -74,11 +82,11 @@
                 android:text="Vehicle Controls" />
 
             <Button
-                android:id="@+id/btn_mixed"
+                android:id="@+id/btn_mock"
                 android:layout_width="125dp"
                 android:layout_height="75dp"
                 android:layout_weight="1"
-                android:text="Mixed" />
+                android:text="Mock Exam" />
 
 
         </LinearLayout>
