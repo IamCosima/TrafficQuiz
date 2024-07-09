@@ -1,6 +1,6 @@
 package com.example.trafficquiz.quiz.game.model
 
-class dbmodel {
+class dbmodel() {
     var id : Int = 0
     var Question : String = ""
     //var Image : Int = 0

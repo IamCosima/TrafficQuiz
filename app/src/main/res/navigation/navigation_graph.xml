@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_quizfragment_to_scorefragment"
             app:destination="@id/scorefragment" />
+        <argument
+            android:name="QuizType"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/scorefragment"

@@ -41,7 +41,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="1/10"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -68,77 +67,73 @@
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:id="@+id/text_view_optionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:onClick="ClickOption1"
+
+
+            android:padding="15dp"
             android:text="Option 1"
-            android:padding="15dp"
-
-
-            android:textSize="17sp"
             android:textColor="#7A8089"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:id="@+id/text_view_optionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+
+
+            android:padding="15dp"
             android:text="Option 2"
-            android:padding="15dp"
-
-
-
-            android:textSize="17sp"
             android:textColor="#7A8089"
-            android:textStyle="bold"
-            android:gravity="center"/>
-
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:id="@+id/text_view_optionThree"
-            android:text="Option 3"
-            android:textSize="17sp"
-            android:padding="15dp"
-
-
-            android:textColor="#7A8089"
-            android:textStyle="bold"
-            android:gravity="center"/>
-
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:id="@+id/text_view_optionFour"
-            android:text="Option 4"
-            android:textSize="17sp"
+            android:gravity="center"
             android:padding="15dp"
 
+
+            android:text="Option 3"
             android:textColor="#7A8089"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
 
-            android:textStyle="bold"
-            android:gravity="center"/>
+        <TextView
+            android:id="@+id/text_view_optionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+
+            android:text="Option 4"
 
 
-
+            android:textColor="#7A8089"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
 
         <Button
+            android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:id="@+id/btnSubmit"
-            android:text="SUBMIT"/>
+            android:text="SUBMIT" />
 
 
 
