@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.trafficquiz.R
 import com.example.trafficquiz.databinding.FragmentTitleBinding
+import com.example.trafficquiz.quiz.game.WrongDB
 
 
 class titlefragment : Fragment() {
@@ -26,7 +28,6 @@ class titlefragment : Fragment() {
         binding.StartBtn.setOnClickListener{view:View ->
             view.findNavController().navigate(R.id.action_titlefragment_to_quizselector)
         }
-
 
         return binding.root
     }

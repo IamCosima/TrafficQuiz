@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.trafficquiz.R
@@ -53,10 +54,11 @@ class quizselector : Fragment() {
             view.findNavController().navigate(action)
         }
 
-        binding.btnMock.setOnClickListener{view:View ->
+        binding.btnWrongs.setOnClickListener{view:View ->
             val action = quizselectorDirections.actionQuizselectorToQuizfragment(6)
             view.findNavController().navigate(action)
         }
+
 
         return binding.root
     }

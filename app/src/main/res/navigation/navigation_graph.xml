@@ -23,9 +23,25 @@
         android:name="com.example.trafficquiz.quiz.score.scorefragment"
         android:label="fragment_scorefragment"
         tools:layout="@layout/fragment_score" >
+        <argument
+            android:name="Correct"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="Wrong"
+            app:argType="integer"
+            android:defaultValue="0" />
         <action
-            android:id="@+id/action_scorefragment_to_titlefragment"
-            app:destination="@id/titlefragment" />
+            android:id="@+id/action_scorefragment_to_quizselector"
+            app:destination="@id/quizselector" />
+        <argument
+            android:name="max"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
     <fragment
         android:id="@+id/titlefragment"

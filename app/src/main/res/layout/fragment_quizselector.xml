@@ -82,11 +82,11 @@
                 android:text="Vehicle Controls" />
 
             <Button
-                android:id="@+id/btn_mock"
+                android:id="@+id/btn_wrongs"
                 android:layout_width="125dp"
                 android:layout_height="75dp"
                 android:layout_weight="1"
-                android:text="Mock Exam" />
+                android:text="Practice Incorrect" />
 
 
         </LinearLayout>
