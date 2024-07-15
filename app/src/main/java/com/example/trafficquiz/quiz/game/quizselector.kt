@@ -28,7 +28,14 @@ class quizselector : Fragment() {
         // Inflate the layout for this fragment
 
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_quizselector,container,false)
-
+        //depending on which button is clicked it will pass an argument through the nav component to only show the questions
+        //from that particular section
+        // 1 = Signs
+        //2 = Markings
+        //3 = Signals
+        //4 = Rules
+        //5 = controls
+        //6 = collection of questions that the user got wrong in the previous sections
         binding.btnRoadSign.setOnClickListener{view:View ->
             val action = quizselectorDirections.actionQuizselectorToQuizfragment(1)
             view.findNavController().navigate(action)

@@ -44,18 +44,26 @@ class scorefragment : Fragment() {
             val action = scorefragmentDirections.actionScorefragmentToQuizselector()
             view.findNavController().navigate(action)
         }
+        /*
+        This creates a helper value to connect to the database and save the values that need to be put into the databse
+        into a model for the score
+         */
         var helper = WrongDB(requireContext())
 
         var model = scoremodel()
         model.Type = type
         model.score = correctNum.toString() + " / "  + max.toString()
-
+        //Adds to the database
         helper.add_score(model)
 
+
+        //This is used to delete the questions from the database if there was a question that the user got right
         var db = helper.readableDatabase
         var I = 0
         var delete = "DELETE FROM Wrong_Questions WHERE Wrong_Times_wrong >= 1"
         db.execSQL(delete)
+
+        //This will show the scores of the top 10 previous attempts
         var rs = db.rawQuery("Select Score_value from Score_TABLE_NAME Where Score_Type = $type ORDER BY Score_value DESC LIMIT 10",null)
 
         try {
@@ -70,7 +78,7 @@ class scorefragment : Fragment() {
 
 
 
-        //Old TextFile
+        //Old TextFile implementation
     /*
         val file:String = "HighScore"
         val data:String = System.lineSeparator() + type.toString()+" : "+ binding.textviewScore.text.toString()

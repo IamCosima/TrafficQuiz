@@ -47,6 +47,7 @@ class WrongDB(context: Context): SQLiteOpenHelper(context, DB_NAME,null, DB_VERS
     }
     @SuppressLint("Range")
     fun getallWrong():List<dbmodel>{
+        //gets all values from wrong questions database
         val Wrong_List = ArrayList<dbmodel>()
         val db =  readableDatabase
         val selectQuery = "Select * from $Wrong_TABLE_NAME"
@@ -75,6 +76,7 @@ class WrongDB(context: Context): SQLiteOpenHelper(context, DB_NAME,null, DB_VERS
 
     @SuppressLint("Range")
     fun getallScore():List<scoremodel>{
+        //gets all the values from the score database
         val Score_List = ArrayList<scoremodel>()
         val db = readableDatabase
         val selectQuery = "Select * from $Score_TABLE_NAME"
@@ -115,6 +117,7 @@ class WrongDB(context: Context): SQLiteOpenHelper(context, DB_NAME,null, DB_VERS
     }
 
     fun add_score(score : scoremodel) : Boolean {
+        //saves values to the score database
         val db = this.writableDatabase
         val values = ContentValues()
         values.put(Score_value,score.score)
@@ -125,6 +128,7 @@ class WrongDB(context: Context): SQLiteOpenHelper(context, DB_NAME,null, DB_VERS
     }
 
 fun wrong_correct(question : String){
+    //if the question was correct increment times wrong to be used later in the score model
     val dbupdate = this.writableDatabase
     val values = ContentValues()
     values.put(Wrong_Times_wrong,1)
